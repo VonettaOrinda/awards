@@ -32,7 +32,7 @@ def home(request):
         print(random_post.photo)
     except Post.DoesNotExist:
         posts = None
-    return render(request, 'home.html', {'posts': posts, 'form': form, 'random_post': random_post})
+    return render(request, 'all-awwards/home.html', {'posts': posts, 'form': form, 'random_post': random_post})
 
 
 class ProfileViewSet(viewsets.ModelViewSet):
