@@ -55,7 +55,7 @@ class PostViewSet(viewsets.ModelViewSet):
 
 @login_required(login_url='accounts/login')
 def profile(request, username):
-    return render(request, 'profile.html')
+    return render(request, 'all-awwards/profile.html')
 
 
 def user_profile(request, username):
@@ -65,7 +65,7 @@ def user_profile(request, username):
     params = {
         'user_prof': user_prof,
     }
-    return render(request, 'userprofile.html', params)
+    return render(request, 'all-awwards/userprofile.html', params)
 
 
 @login_required(login_url='accounts/login')
@@ -85,7 +85,7 @@ def edit_profile(request, username):
         'user_form': user_form,
         'prof_form': prof_form
     }
-    return render(request, 'edit.html', params)
+    return render(request, 'all-awwards/edit.html', params)
 
 
 @login_required(login_url='accounts/login')
@@ -131,7 +131,7 @@ def project(request, post):
         'rating_status': rating_status
 
     }
-    return render(request, 'project.html', params)
+    return render(request, 'all-awwards/project.html', params)
 
 
 def search_project(request):
@@ -147,4 +147,4 @@ def search_project(request):
         return render(request, 'results.html', params)
     else:
         message = "You haven't searched for any image category"
-    return render(request, 'results.html', {'message': message})
+    return render(request, 'all-awwards/results.html', {'message': message})

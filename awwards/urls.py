@@ -9,8 +9,6 @@ router.register('profile', views.ProfileViewSet)
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('accounts/', include('registration.backends.simple.urls')),
-    
     path('account/', include('django.contrib.auth.urls')),
     path('api/', include(router.urls)),
     path('<username>/profile', views.user_profile, name='userprofile'),
