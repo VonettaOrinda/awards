@@ -1,6 +1,29 @@
-{%extends 'all-awwards/base.html'%}
-{% block content %}
-<h1> Helloooooo </h1> 
-{{block.super}}
-{% endblock %} {% endcomment %}
+<div class="" style="font-family: 'Jost', sans-serif;">
+    {%extends 'all-awwards/base.html'%}
+    {%block content%}
+    <div class="container-fluid">
 
+       
+        <h3>Sample Projects</h3>
+        <div class="row">
+            {%for proj in projects%}
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="view view-cascade overlay">
+                        <img src="{{proj.projectscreenshot.url}}" class="img-fluid" alt="">
+                        <a href="projects/{{proj.id}}">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="">{{proj.title}}</h5>
+                        <a href="projects/{{proj.id}}">Readmore</a>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+
+    {%endblock%}
+</div>
