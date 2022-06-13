@@ -15,13 +15,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ">
       
-        <a class="nav-link" href="/">Home </a>
+        <a class="nav-link" href="/">HOME </a>
       
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Location
+          REGISTER/LOGIN
         </a>
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          category
+          ADD PROJECT
         </a>
 
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -34,10 +34,10 @@
         </div>
     
   </div>
-  <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search_results' %}" method="get">
+  {% comment %} <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search_results' %}" method="get">
     <input type="text" class="form-control" placeholder="Search Image" name="categories">
     <button class="btn btn-outline-success  my-2 my-sm-0 " type="submit">Search</button>
-  </form>
+  </form> {% endcomment %}
 </nav>
 
 </body>
