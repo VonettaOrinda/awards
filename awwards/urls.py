@@ -1,11 +1,15 @@
 from django.urls import path, include
 from . import views
 from rest_framework import routers
+# from django.contrib.auth import views as auth_views
 
 router = routers.DefaultRouter()
 router.register('users', views.UserViewSet)
 router.register('posts', views.PostViewSet)
 router.register('profile', views.ProfileViewSet)
+
+
+
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -17,4 +21,5 @@ urlpatterns = [
     path('profile/<username>/settings', views.edit_profile, name='edit'),
     path('project/<post>', views.project, name='project'),
     path('search/', views.search_project, name='search'),
+    #  path('logout/', auth_views.logout_then_login),
 ]

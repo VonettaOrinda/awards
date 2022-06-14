@@ -2,7 +2,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    background-color:coral;
+    background-color:goldenrod;
     background-repeat: repeat-x;
 }
 
@@ -10,4 +10,14 @@
     display: flex!important;
     justify-content: space-around;
     flex-basis: auto;
+    }
+
+.display{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+.container-fluid{
+        padding-right:0px;
+         padding-left:0px;
     }

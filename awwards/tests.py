@@ -20,7 +20,7 @@ class TestProfile(TestCase):
 class PostTest(TestCase):
     def setUp(self):
         self.user = User.objects.create(id=1, username='von')
-        self.post = Post.objects.create(id=1, title='test post', photo='https://ucarecdn.com/0ccf61ff-508e-46c6-b713-db51daa6626e', description='desc',
+        self.post = Post.objects.create(id=1, title='test post', description='desc',
                                         user=self.user, url='http://ur.coml')
 
     def test_instance(self):
@@ -50,7 +50,7 @@ class PostTest(TestCase):
 class RatingTest(TestCase):
     def setUp(self):
         self.user = User.objects.create(id=1, username='von')
-        self.post = Post.objects.create(id=1, title='test post', photo='https://ucarecdn.com/0ccf61ff-508e-46c6-b713-db51daa6626e', description='desc',
+        self.post = Post.objects.create(id=1, title='test post', description='desc',
                                         user=self.user, url='http://ur.coml')
         self.rating = Rating.objects.create(id=1, design=6, usability=7, content=9, user=self.user, post=self.post)
 
